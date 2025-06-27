@@ -1,0 +1,90 @@
+import type { User, Project, Contribution } from '@/lib/types';
+
+export const users: User[] = [
+  {
+    id: '1',
+    name: 'Alice Johnson',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    imageHint: 'woman developer',
+    bio: 'Full-stack developer with a passion for open-source and decentralized applications. Loves building tools that empower other developers.',
+    githubUrl: '#',
+    twitterUrl: '#',
+    linkedinUrl: '#',
+  },
+  {
+    id: '2',
+    name: 'Bob Smith',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    imageHint: 'man developer',
+    bio: 'Mobile app developer focused on creating delightful user experiences on iOS and Android. Believer in clean code and pixel-perfect design.',
+  },
+  {
+    id: '3',
+    name: 'Charlie Brown',
+    avatarUrl: 'https://placehold.co/100x100.png',
+    imageHint: 'man scientist',
+    bio: 'Data scientist and AI enthusiast. Enjoys turning complex datasets into actionable insights and building intelligent systems.',
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    name: 'CodeStream AI',
+    creatorId: '1',
+    description: 'An AI-powered code completion tool that learns from your personal coding style.',
+    longDescription: 'CodeStream AI is a revolutionary developer tool that goes beyond standard autocompletion. By analyzing your existing codebase and coding patterns, it provides highly relevant, context-aware suggestions that feel like they were written by you. Our mission is to reduce boilerplate, prevent common errors, and make coding faster and more enjoyable. The funds will be used for model training and cloud infrastructure.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'developer coding',
+    fundingGoal: 50000,
+    currentFunding: 35000,
+    backers: 152,
+    requiredSkills: ['Python', 'Machine Learning', 'TypeScript', 'VSCode API'],
+  },
+  {
+    id: '2',
+    name: 'DevSync',
+    creatorId: '2',
+    description: 'A real-time collaboration platform for developers to share and sync their development environments.',
+    longDescription: 'Tired of "it works on my machine"? DevSync eliminates environment drift by creating shareable, cloud-based development environments. Spin up identical environments with one click, collaborate in real-time, and ensure your entire team is on the same page. We are seeking funding to expand our supported stacks and improve our real-time synchronization protocol.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'team collaboration',
+    fundingGoal: 75000,
+    currentFunding: 76000,
+    backers: 230,
+    requiredSkills: ['Go', 'Docker', 'Kubernetes', 'WebSockets'],
+  },
+  {
+    id: '3',
+    name: 'QuantumLeap DB',
+    creatorId: '3',
+    description: 'A next-generation serverless database designed for simplicity and infinite scale.',
+    longDescription: 'QuantumLeap DB is a serverless database that combines the flexibility of NoSQL with the power of relational databases. With a focus on developer experience, it offers a simple API, automatic scaling, and a generous free tier. This project aims to challenge the status quo of databases. Funding will support core development, performance optimization, and community building.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'database server',
+    fundingGoal: 100000,
+    currentFunding: 45000,
+    backers: 98,
+    requiredSkills: ['Rust', 'Distributed Systems', 'Database Internals'],
+  },
+  {
+    id: '4',
+    name: 'API-Forge',
+    creatorId: '1',
+    description: 'A visual API designer that generates documentation, SDKs, and mock servers automatically.',
+    longDescription: 'API-Forge is a tool that streamlines the entire API lifecycle. Visually design your API schema, and let Forge generate beautiful, interactive documentation, type-safe SDKs in multiple languages, and a fully functional mock server for front-end development. We want to make API development 10x faster. The raised funds will help us add support for more languages and protocols like GraphQL.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'api development',
+    fundingGoal: 40000,
+    currentFunding: 12000,
+    backers: 45,
+    requiredSkills: ['React', 'Node.js', 'ASTs', 'OpenAPI'],
+  },
+];
+
+export const contributions: Contribution[] = [
+  { id: '1', projectId: '1', backerId: '2', amount: 100, timestamp: new Date().toISOString() },
+  { id: '2', projectId: '1', backerId: '3', amount: 50, timestamp: new Date().toISOString() },
+  { id: '3', projectId: '2', backerId: '1', amount: 250, timestamp: new Date().toISOString() },
+  { id: '4', projectId: '3', backerId: '2', amount: 500, timestamp: new Date().toISOString() },
+];
